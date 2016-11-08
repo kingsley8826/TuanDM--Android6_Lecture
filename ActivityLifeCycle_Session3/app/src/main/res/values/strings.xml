@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">ActivityLifeCycle_Session3</string>
+    <string name="activity_a">Activity A</string>
+    <string name="oncreate">onCreate</string>
+    <string name="ondestroy">onDestroy</string>
+    <string name="onstop">onStop</string>
+    <string name="onpause">onPause</string>
+    <string name="onresume">onResume</string>
+    <string name="onrestart">onRestart</string>
+    <string name="onstart">onStart</string>
+    <string name="go_to_activity_b">Go to Activity B</string>
+    <string name="activity_b">Activity B</string>
+    <string name="activity_c">Activity C</string>
+    <string name="activityA">Activity A</string>
+    <string name="activityB">Activity B</string>
+    <string name="oncreate_0">onCreate: 0</string>
+    <string name="onstart_0">onStart: 0</string>
+    <string name="onrestart_0">onRestart: 0</string>
+    <string name="onresume_0">onResume: 0</string>
+    <string name="onpause_0">onPause: 0</string>
+    <string name="onstop_0">onStop: 0</string>
+    <string name="ondestoy_0">onDestoy: 0</string>
+</resources>

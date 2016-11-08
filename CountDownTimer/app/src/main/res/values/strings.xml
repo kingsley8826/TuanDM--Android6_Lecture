@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CountDownTimer</string>
+    <string name="mins">Mins</string>
+    <string name="secs">Secs</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="min">Min</string>
+    <string name="sec">Sec</string>
+    <string name="_00_00">00 : 00</string>
+</resources>
