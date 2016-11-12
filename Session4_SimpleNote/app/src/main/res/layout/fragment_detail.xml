@@ -1,0 +1,36 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.tu4nfpt.simplenote.fragment.DetailFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/ed_title"
+            android:hint="@string/tittle"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btn_save"
+            android:text="@string/save"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/ed_content"
+            android:gravity="left|top"
+            android:hint="@string/con"
+            android:layout_below="@id/ed_title"
+            android:layout_above="@id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+
+    </RelativeLayout>
+
+</FrameLayout>
