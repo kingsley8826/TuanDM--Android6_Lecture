@@ -8,14 +8,20 @@ import android.os.Bundle;
 
 public class BaseActivity extends AppCompatActivity {
 
-    public void changeFragment(int resId, Fragment detailFragment){ // Fragment v4.app
+    public void changeFragment(int resId, Fragment detailFragment, boolean addToBackStack){ // Fragment v4.app
         // get fragmentManager
         FragmentManager fragmentManager = getSupportFragmentManager();
         // Start replacing
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         //
         fragmentTransaction.replace(resId, detailFragment);
-
+        if(addToBackStack){
+            fragmentTransaction.addToBackStack("key");
+        }
         fragmentTransaction.commit();
+//        getSupportFragmentManager()
+//                .beginTransaction()
+//                .replace(resId,detailFragment)
+//                .commit();
     }
 }

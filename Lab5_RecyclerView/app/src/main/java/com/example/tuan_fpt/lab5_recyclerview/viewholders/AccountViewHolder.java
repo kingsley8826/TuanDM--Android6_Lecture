@@ -31,6 +31,8 @@ public class AccountViewHolder extends RecyclerView.ViewHolder {
     public void bind(Note note){
         tvTitle.setText(note.getTitle());
         tvContent.setText(note.getContent());
-        llNote.setBackgroundColor(Color.parseColor(note.getColor()));
+        if (!note.getColor().equalsIgnoreCase("")) {
+            llNote.setBackgroundColor(Color.parseColor(note.getColor()));
+        }
     }
 }

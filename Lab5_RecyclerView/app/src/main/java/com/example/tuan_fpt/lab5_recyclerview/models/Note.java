@@ -18,11 +18,24 @@ public class Note {
     private String title;
     @SerializedName("color")
     private String color;
+    @SerializedName("completed")
+    private boolean completed;
+    @SerializedName("_id")
+    private Oid id;
 
-    public Note(String content, String title, String color) {
+    public Note(String content, String title, String color, boolean completed, Oid id) {
         this.content = content;
         this.title = title;
         this.color = color;
+        this.completed = completed;
+        this.id = id;
+    }
+
+    public Note(String title, String content, String color, boolean completed) {
+        this.title = title;
+        this.content = content;
+        this.color = color;
+        this.completed = completed;
     }
 
     public String getContent() {
@@ -48,8 +61,36 @@ public class Note {
     public void setColor(String color) {
         this.color = color;
     }
-    public static List<Note> noteList = new ArrayList<>(
+
+    public boolean isCompleted() {
+        return completed;
+    }
+
+    public void setCompleted(boolean completed) {
+        this.completed = completed;
+    }
+
+    public Oid getId() {
+        return id;
+    }
+
+    public static List<Note> completeNoteList = new ArrayList<>(
     );
+
+    public static List<Note> incompleteNoteList = new ArrayList<>(
+    );
+
+    public class Oid {
+        @SerializedName("$oid")
+        private String id;
+        public Oid(String id) {
+            this.id = id;
+        }
+        @Override
+        public String toString() {
+            return id;
+        }
+    }
 
     @Override
     public String toString() {
@@ -57,6 +98,8 @@ public class Note {
                 "content='" + content + '\'' +
                 ", title='" + title + '\'' +
                 ", color='" + color + '\'' +
+                ", completed=" + completed +
+                ", id=" + id +
                 '}';
     }
 }

@@ -14,5 +14,5 @@ import retrofit2.http.POST;
 
 public interface RegisterService {
     @POST("register")
-    Call<Status> register(@Body RequestBody body);
+    Call<Status> callRegister(@Body RequestBody body);
 }

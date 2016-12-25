@@ -14,7 +14,7 @@ import retrofit2.http.POST;
  * Created by Tuan-FPT on 18/12/2016.
  */
 
-public interface TodosServices {
+public interface ListNoteService {
     @GET("todos")
-    Call<List<Note>> getNotes(@Header("token") String token);
+    Call<List<Note>> callNoteList(@Header("token") String token);
 }

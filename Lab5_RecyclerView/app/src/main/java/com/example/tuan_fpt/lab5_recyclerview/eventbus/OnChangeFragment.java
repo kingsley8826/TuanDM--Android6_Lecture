@@ -9,18 +9,26 @@ import android.support.v4.app.Fragment;
 public class OnChangeFragment {
 
     private Fragment fragment;
-    private String token;
+    private boolean isAddToBackStack;
 
-    public OnChangeFragment(Fragment fragment, String token) {
+    public OnChangeFragment(Fragment fragment, boolean isAddToBackStack) {
         this.fragment = fragment;
-        this.token = token;
+        this.isAddToBackStack = isAddToBackStack;
     }
 
     public Fragment getFragment() {
         return fragment;
     }
 
-    public String getToken() {
-        return token;
+    public void setFragment(Fragment fragment) {
+        this.fragment = fragment;
+    }
+
+    public boolean isAddToBackStack() {
+        return isAddToBackStack;
+    }
+
+    public void setAddToBackStack(boolean addToBackStack) {
+        isAddToBackStack = addToBackStack;
     }
 }
